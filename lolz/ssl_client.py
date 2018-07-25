@@ -12,10 +12,10 @@ if __name__ == '__main__':
     sock.setblocking(1);
     sock.connect((HOST, PORT))
 
-    context = ssl.SSLContext(ssl.PROTOCOL_TLS)
+    context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
     context.verify_mode = ssl.CERT_REQUIRED
     context.load_verify_locations('ca.pem')
-    context.load_cert_chain(certfile="client.pem", keyfile="client-key.pem")
+    context.load_cert_chain(certfile="client.pem", keyfile="client.key")
 
     if ssl.HAS_SNI:
         secure_sock = context.wrap_socket(sock, server_side=False, server_hostname=HOST)

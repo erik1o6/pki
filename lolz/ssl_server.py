@@ -16,14 +16,14 @@ if __name__ == '__main__':
     server.listen(10)
 
     client, fromaddr = server.accept()
-    secure_sock = ssl.wrap_socket(client, server_side=True, ca_certs = "ca.pem", certfile="server.pem", keyfile="server.pem", cert_reqs=ssl.CERT_REQUIRED,
-                           ssl_version=ssl.PROTOCOL_TLS)
+    secure_sock = ssl.wrap_socket(client, server_side=True, ca_certs = "ca.pem", certfile="lol.pem", keyfile="server.key", cert_reqs=ssl.CERT_REQUIRED,
+                           ssl_version=ssl.PROTOCOL_TLSv1_2)
 
-    print (repr(secure_sock.getpeername()))
-    print (secure_sock.cipher())
-    print (pprint.pformat(secure_sock.getpeercert()))
+    print repr(secure_sock.getpeername())
+    print secure_sock.cipher()
+    print pprint.pformat(secure_sock.getpeercert())
     cert = secure_sock.getpeercert()
-    print (cert)
+    print cert
 
     # verify client
     if not cert or ('commonName', 'test') not in cert['subject'][5]: raise Exception("ERROR")
