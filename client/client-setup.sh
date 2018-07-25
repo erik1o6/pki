@@ -31,12 +31,12 @@ cat << EOF > client-config.json
       }
    },
    "remotes" : {
-      "server" : "http://127.0.0.1:8889"
+      "intermediate-ca" : "http://127.0.0.1:8888"
    },
    "signing" : {
       "default" : {
          "auth_remote" : {
-            "remote" : "server",
+            "remote" : "intermediate-ca",
             "auth_key" : "sand"
          }
       }
