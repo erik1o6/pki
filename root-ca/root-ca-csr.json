@@ -1,0 +1,10 @@
+{
+    "CN": "shadow-root-ca",
+    "key": {
+        "algo": "rsa",
+        "size": 4096
+    },
+    "ca": {
+        "expiry": "87600h"
+    }
+}

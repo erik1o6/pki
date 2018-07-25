@@ -1,0 +1,10 @@
+{
+    "CN": "shadow-intermediate-ca",
+    "key": {
+        "algo": "rsa",
+        "size": 4096
+    },
+    "ca": {
+        "expiry": "26280h"
+    }
+}

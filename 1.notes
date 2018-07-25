@@ -1,0 +1,4 @@
+               "auth_remote" : {
+                  "remote" : "caserver",
+                  "auth_key" : "intermediate"
+               },

@@ -1,0 +1,13 @@
+{
+  "CN": "shadow-server",
+  "hosts": [
+    "ubuntu",
+    "192.168.121.230",
+    "localhost",
+    "127.0.0.1"
+  ],
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  }
+}
